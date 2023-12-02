@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>CSS Selectors</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/style.css" rel="stylesheet">
+    <style>
+        /* Element selector*/
+        div {
+            /* background-color: red; */
+        }
+
+        /* Class selector */
+        .red {
+            background-color: red;
+        }
+
+
+        /* Id selector  */
+        #green {
+            background-color: green;
+        }
+
+        /* CHild selector */
+        div>p {
+            /* color: blue; */
+            /* background-color: brown; */
+        }
+
+        /* Descendant Selector  */
+        div p {
+            color: blue;
+            background-color: brown;
+        }
+
+        /* Universal selector  */
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Pseudo Selector */
+        a:visited {
+            color: red;
+        }
+
+        a:active {
+            background-color: maroon;
+        }
+
+        a:hover {
+            background-color: yellow;
+        }
+
+        /* Apply properties to first child p of parent class */
+        p:first-child {
+            background-color: aqua;
+        }
+    </style>
+</head>
+
+<body>
+    <main class="one">
+        <p>I am first</p>
+        <p>I am second</p>
+    </main>
+    <div class="red">
+        I am a div
+        <article>
+
+            <p>I am a paragraph tag</p>
+        </article>
+    </div>
+    <div id="green">
+        I am another div
+    </div>
+    <a href="https://www.pong.com" target="_blank">Go to Google</a>
+</body>
+
+</html>
