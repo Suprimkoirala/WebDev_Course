@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Selector advanced</title>
+    <style>
+        /* .boxes:first-child{ */
+            /* if .boxes is the first child of its parent then apply this property */
+            /* background-color: red; */
+        /* } */
+        /* .box::first-line{
+            color: yellow;
+        } */
+         /* .boxes *{
+            color: blue;
+            border: 2px solid black;
+         } */
+         /* margin-top: 34px; */
+         /* grouping selectors using comma:  */
+         /* p, a, .box, [data-color="primary"]{
+            padding: 34px;
+            
+         } */
+          /* .box:nth-child(odd){
+            background-color: blue;
+          } */
+           /* .box:nth-last-child(1){
+            color: blue;
+           } */
+           .boxes:before{
+                content: "I was a good boy";
+                background-color: bisque;
+            }
+            .boxes::after{
+                content: "I have become a bad guy";
+            }
+            div::selection{
+                background-color: black;
+                color: aqua;
+            }
+            .box::first-letter{
+                font-size: 18px;
+                color: peru;
+            }
+            input::placeholder{
+                color: rgb(88, 88, 107);
+                /* font-size: 25px; */
+            }
+    </style>
+</head>
+<body>
+    <div class="boxes">
+        <div data-color="primary" class="box">Hey I am a frst bocs hehe</div>
+        <div class="box">Hey I am a bocs hehe</div>
+        <div class="box">Hey I am a bocs hehe</div>
+        <input type="text" placeholder="Type your text here">
+    </div>
+</body>
+</html>

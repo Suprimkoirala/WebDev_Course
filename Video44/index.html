@@ -1,0 +1,299 @@
+<!-- Problems how to resize the SHA 256 text according to the layout -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 7</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    .logo {
+
+        color: yellow;
+    }
+
+    .logo img {
+        height: 63px;
+    }
+
+    nav {
+        justify-content: space-around;
+        align-items: center;
+        display: flex;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .right ul {
+        display: flex;
+        gap: 30px;
+    }
+
+    .right ul li {
+        list-style: none;
+        cursor: pointer;
+    }
+
+    .right ul li span {
+        padding: 4px;
+    }
+
+    main {
+        margin: auto;
+        /* background-color: antiquewhite; */
+        width: 70vw;
+        height: 100%;
+        display: grid;
+        grid-template-rows: 1fr 100px repeat(4, 200px);
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .central {
+        grid-column: 1/4;
+        grid-row: 1/2;
+        display: flex;
+        height: 100%;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .central h1 {
+        margin: 55px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 45px;
+    }
+
+    .central p {
+        font-size: 25px;
+        text-align: center;
+        padding: 13px;
+    }
+
+    .central button {
+        background-color: rgb(23, 131, 177);
+        padding: 14px;
+        margin: 19px;
+        font-weight: bold;
+
+    }
+
+    .central button a {
+        text-decoration: none;
+        color: white;
+
+    }
+
+    .subhead {
+        background-color: white;
+        grid-column: 1/4;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .subhead div {
+        width: 50vw;
+
+    }
+
+    .larger {
+        font-size: 30px;
+    }
+
+    .smaller {
+        font-size: 15px;
+    }
+    .box{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 12px;
+        margin: 8px;
+        /* border: 1px solid rgb(118, 111, 111); */
+        background-color: #f9f9f9;        border-radius: 5px;
+    }
+    .box h3{
+        font-size: 22px;
+    }
+    .box button{
+        margin-bottom: 8px;
+        padding: 10px 20px;
+        background-color: rgb(40, 201, 110);
+    }
+    .box .mid{
+        font-size: 12px;
+        margin: 14px;
+    }
+    .box button a {
+        text-decoration: none;
+        color: white;
+    }
+    .box p{
+        font-size: 10px;
+        margin-top: 3px;
+        text-align: center;
+    }
+</style>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo"><img src="https://www.ultraedit.com/wp-content/uploads/2023/01/UE-Logo-1.webp" alt="LOGO">
+            </div>
+            <div class="right">
+                <ul>
+                    <li><span>Products </span><svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M6 9L11.2929 14.2929C11.6262 14.6262 11.7929 14.7929 12 14.7929C12.2071 14.7929 12.3738 14.6262 12.7071 14.2929L18 9"
+                                stroke="#141B34" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg> </li>
+                    <li> <span>Pricing </span><svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M6 9L11.2929 14.2929C11.6262 14.6262 11.7929 14.7929 12 14.7929C12.2071 14.7929 12.3738 14.6262 12.7071 14.2929L18 9"
+                                stroke="#141B34" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg></li>
+                    <li><span>Resources </span><svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M6 9L11.2929 14.2929C11.6262 14.6262 11.7929 14.7929 12 14.7929C12.2071 14.7929 12.3738 14.6262 12.7071 14.2929L18 9"
+                                stroke="#141B34" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg></li>
+                    <li><span>About Us </span><svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M6 9L11.2929 14.2929C11.6262 14.6262 11.7929 14.7929 12 14.7929C12.2071 14.7929 12.3738 14.6262 12.7071 14.2929L18 9"
+                                stroke="#141B34" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg></li>
+                    <li><img src="https://www.ultraedit.com/wp-content/themes/Divi_Child/img/Lang.png" alt="Lens"></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="central">
+            <h1>Download UltraEdit for Windows</h1>
+            <p>Download and try UltraEdit before you buy it! This download includes the full Windows version of the text
+                editor.</p>
+            <button><a href="ue_english_64.exe">Download Mac or Linux version</a></button>
+        </div>
+        <div class="subhead">
+            <div><span class="larger">Download UltraEdit </span> <span class="smaller"> v2024.1(released 2024-08-27) |
+                    Hotfix information (2024-08-18)</span></div>
+        </div>
+        <div class="box">
+            <h3>English</h3>
+            <p class="mid">English</p>
+            <button><a href="ue_english_64.exe"> Download 64-bit</a></button>
+           
+            <p>
+                SHA256</p><p>
+                3C783C0872319DE70343C2C79D
+                9E0024FDA3F
+                1DB472B8F1119343D42190AAD8C
+            </p>
+        </div>
+        <div class="box"><h3>English</h3>
+            <p class="mid">English</p>
+            <button><a href="ue_english_64.exe"> Download 64-bit</a></button>
+            
+            <p>
+                SHA256 </p> <p>
+                3C783C0872319DE70343C2C79D
+                9E0024FDA3F
+                1DB472B8F1119343D42190AAD8C
+            </p></div>
+        <div class="box"><h3>English</h3>
+            <p class="mid">English</p>
+            <button><a href="ue_english_64.exe"> Download 64-bit</a></button>
+           
+            <p>
+                SHA256</p> <p>
+                3C783C0872319DE70343C2C79D
+                9E0024FDA3F
+                1DB472B8F1119343D42190AAD8C
+            </p></div>
+        <div class="box"><h3>English</h3>
+            <p class="mid">English</p>
+            <button><a href="ue_english_64.exe"> Download 64-bit</a></button>
+           
+            <p>
+                SHA256</p> <p>
+                3C783C0872319DE70343C2C79D
+                9E0024FDA3F
+                1DB472B8F1119343D42190AAD8C
+            </p></div>
+        <div class="box"><h3>English</h3>
+            <p class="mid">English</p>
+            <button><a href="ue_english_64.exe"> Download 64-bit</a></button>
+           
+            <p>
+                SHA256</p> <p>
+                3C783C0872319DE70343C2C79D
+                9E0024FDA3F
+                1DB472B8F1119343D42190AAD8C
+            </p></div>
+        <div class="box"><h3>English</h3>
+            <p class="mid">English</p>
+            <button><a href="ue_english_64.exe"> Download 64-bit</a></button>
+           
+            <p>
+                SHA256</p> <p>
+                3C783C0872319DE70343C2C79D
+                9E0024FDA3F
+                1DB472B8F1119343D42190AAD8C
+            </p></div>
+        <div class="box"><h3>English</h3>
+            <p class="mid">English</p>
+            <button><a href="ue_english_64.exe"> Download 64-bit</a></button>
+           
+            <p>
+                SHA256</p> <p>
+                3C783C0872319DE70343C2C79D
+                9E0024FDA3F
+                1DB472B8F1119343D42190AAD8C
+            </p></div>
+        <div class="box"><h3>English</h3>
+            <p class="mid">English</p>
+            <button><a href="ue_english_64.exe"> Download 64-bit</a></button>
+           
+            <p>
+                SHA256</p> <p>
+                3C783C0872319DE70343C2C79D
+                9E0024FDA3F
+                1DB472B8F1119343D42190AAD8C
+            </p></div>
+        <div class="box"><h3>English</h3>
+            <p class="mid">English</p>
+            <button><a href="ue_english_64.exe"> Download 64-bit</a></button>
+           
+            <p>
+                SHA256</p> <p>
+                3C783C0872319DE70343C2C79D
+                9E0024FDA3F
+                1DB472B8F1119343D42190AAD8C
+            </p></div>
+        <div class="box"><h3>English</h3>
+            <p class="mid">English</p>
+            <button><a href="ue_english_64.exe"> Download 64-bit</a></button>
+           
+            <p>
+                SHA256</p> <p>
+                3C783C0872319DE70343C2C79D
+                9E0024FDA3F
+                1DB472B8F1119343D42190AAD8C
+            </p></div>
+
+    </main>
+</body>
+
+</html>

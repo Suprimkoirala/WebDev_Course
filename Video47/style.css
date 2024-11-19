@@ -1,0 +1,152 @@
+.logo {
+
+    color: yellow;
+}
+
+.logo img {
+    height: 63px;
+}
+
+nav {
+    justify-content: space-around;
+    align-items: center;
+    display: flex;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+
+.right ul {
+    display: flex;
+    gap: 30px;
+}
+
+.right ul li {
+    list-style: none;
+    cursor: pointer;
+}
+
+.right ul li span {
+    padding: 4px;
+}
+
+.first {
+    display: flex;
+    flex-direction: column;
+    background-color: aliceblue;
+    justify-content: center;
+    align-items: center;
+    gap: 13px;
+    margin: 50px;
+    font-family: sans-serif;
+}
+
+.first span {
+    font-size: 40px;
+}
+
+section span img {
+    width: 82px;
+    margin: 0 23px;
+}
+
+.first p {
+    font-size: 23px;
+    width: 44vw;
+    text-align: center;
+}
+
+.btn {
+    background-color: #00b6d1;
+    color: white;
+    padding: 14px 16px;
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 10px;
+    margin: 12px 0;
+    cursor: pointer;
+}
+.btn a {
+    text-decoration: none;
+    color: white;
+}
+.green {
+    background-color: #5cb85c;
+}
+
+.btn-small {}
+
+.flex {
+    display: flex;
+}
+
+.small {
+    font-size: 12px;
+}
+
+.second {
+    max-width: 55vw;
+    margin: auto;
+    /* background-color: aquamarine; */
+}
+
+.item {
+    padding: 23px;
+    background-color: #f9f9f9;
+    border-radius: 12px;
+    font-size: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+}
+
+.item-lang {
+    font-weight: 500;
+    text-align: center;
+    padding-bottom: 36px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 12px;
+}
+
+.download:nth-child(2) {
+    font-size: 23px;
+}
+
+.download img {
+    padding: 0 12px;
+}
+
+.download {
+    display: flex;
+    font-family: sans-serif;
+    align-items: center;
+    gap: 10px;
+}
+
+
+@media only screen and (width <= 1520px) {
+    .grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr ;
+        gap: 12px;
+        background-color: rgb(40, 250, 47);
+    }
+  }
+  @media screen and (max-width: 1005px) {
+    .second{
+        width: 35vw;
+    }
+    .grid {
+        display: grid;
+        grid-template-columns: 1fr ;
+        background-color: red;
+    }
+}
+@media screen and (max-width: 771px) {
+    .btn{
+        width: 45%;
+    }
+}

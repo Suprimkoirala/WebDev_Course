@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transition and Animation Exercise</title>
+    <style>
+        .box{
+            height: 121px;
+            width: 121px;
+            background-color: red;
+            border-radius: 70px;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            animation: init-y 1s ease-out  infinite  ,
+            init-y 1s ease-out 1s alternate-reverse infinite,init-2 0.8s ease-out 2s infinite ,
+            init-2 0.8s ease-out 2.8s alternate-reverse infinite, 
+                init-x 4s linear infinite 0s forwards ;
+        }
+        .container{
+            position: relative;
+            height: 80vh;
+            width: 80vw;
+            background-color: blue;
+        }
+        @keyframes init-x {
+            from{
+                left: 0vw;
+            }
+            to{
+                left: 72vw;
+            }
+            
+        }
+        @keyframes init-y{
+            0%{
+                bottom: 0;
+              
+                background-color: brown;
+
+            }
+            100%{
+                bottom: 30vh;
+                background-color: aliceblue;
+            }
+            
+        }
+        @keyframes init-2{
+            0%{
+                bottom: 0;
+
+            }
+            100%{
+                bottom: 20vh;
+            }
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box"></div>
+    </div>
+</body>
+</html>

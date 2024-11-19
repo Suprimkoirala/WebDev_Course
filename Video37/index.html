@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout Exercise</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+
+        }
+        header{
+            position: sticky;
+            top: 0px;
+            margin-bottom: 50px;
+        }
+
+        nav {
+            background-color: pink;
+            padding: 15px;
+            }
+
+        .rand {
+            list-style: none;
+            display: inline;
+            /* background-color: pink; */
+            padding: 50px;
+
+        }
+
+        .container {
+            background-color: green;
+            height: 60vh;
+            width: 80vw;
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-left: 140px;
+        }
+
+        .item {
+            height: 410px;
+            width: 500px;
+            margin: 15px;
+        }
+
+        .item1 {
+            background-color: orange;
+        }
+
+        .item2 {
+            background-color: lightblue;
+        }
+
+        .conti {
+            margin: 13px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 200px;
+            position: relative;
+        }
+
+        .lekh {
+            border: 3px solid gray;
+            border-radius: 11px;
+            width: 80vw;
+            height: 70px;
+            padding: 14px;
+        }
+
+        .lekh p {
+            font-size: 25px;
+            margin: 15px 200px 15px 350px;
+        }
+
+        .logo {
+            position: fixed;
+            height: 25px;
+            width: 25px;
+            margin-left: 50px;
+            margin-top: 60px;
+            border: 1px solid black;
+            border-radius: 100%;
+            align-self: flex-start;
+            background-color: bisque;
+            right: 60px;
+        }
+        footer{
+            height: 25px;
+            background-color: antiquewhite;
+
+        }
+        .rand2 {
+            list-style: none;
+            display: inline;
+            /* background-color: pink; */
+            padding: 50px;
+            color: blue;
+
+        }
+    </style>
+</head>
+
+<body>
+    <header class="navig">
+        <nav>
+            <ul>
+                <li class="rand" >Home</li>
+                <li class="rand">About</li>
+                <li class="rand">Services</li>
+                <li class="rand">Resources</li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <div class="item item1"></div>
+        <div class="item item2"></div>
+    </div>
+    <div class="conti">
+        <div class="lekh">
+            <p>Welcome to the Sigma Web Development Express</p>
+        </div>
+        <div class="logo"></div>
+    </div>
+    <div class="random" style="height: 300px;"></div>
+    <footer>
+        <ul>
+            <li  class="rand2">Home</li>
+            <li class="rand2">About</li>
+            <li class="rand2">Services</li>
+            <li class="rand2">Resources</li>
+        </ul>
+        
+    </footer>
+</body>
+
+</html>
